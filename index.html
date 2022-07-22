@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!-- 2022 © Gizem Gök -->
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Gizem Gök | Software Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <a id="button"></a>
+
+    <!-- ! ======= Header Start ======= -->
+    <section id="header">
+        <!-- ======= Navbar ======= -->
+        <nav class="custom-navbar navbar navbar-expand-lg sticky-top navbar-light bg-light">
+            <div class="container container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo" src="./assets/img/logoblack.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="col-12 navbar-nav d-flex justify-content-between mb-2 mb-lg-0">
+                        <div class="d-flex flex-lg-row flex-column justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#heading">Hakkımda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#projects">Projeler</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#contact-form">İletişim</a>
+                            </li>
+                        </div>
+
+                        <div class="d-flex flex-lg-row flex-column">
+                            <li class="nav-item">
+                                <button type="button" class="nav-link" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">
+                                    Giriş Yap
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="nav-link" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">
+                                    Kayıt Ol
+                                </button>
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Giriş Yap</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form
+                        class="row g-3 py-5 d-flex flex-column justify-content-center align-items-center needs-validation"
+                        novalidate>
+                        <div class="col-10">
+                            <label for="validationCustom01" class="form-label">Kullanıcı Adınız:</label>
+                            <input type="text" placeholder="johndoe" class="form-control" id="validationCustom01"
+                                required>
+                            <div class="valid-feedback">
+                                İyi görünüyor!
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <label for="validationCustom02" class="form-label">Şifreniz:</label>
+                            <input type="password" class="form-control" placeholder="******" id="validationCustom02"
+                                required>
+                            <div class="valid-feedback">
+                                İyi görünüyor!
+                            </div>
+                        </div>
+                        <div class="col-10 d-flex justify-content-end">
+                            <button class="btn btn-success" type="submit">Giriş Yap</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Kaydol</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form
+                        class="row g-3 py-5 d-flex flex-column justify-content-center align-items-center needs-validation"
+                        novalidate>
+                        <div class="col-10">
+                            <label for="validationDefaultUsername" class="form-label">Kullanıcı Adınız:</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                <input type="text" class="form-control" id="validationDefaultUsername"
+                                    aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <label for="validationCustom01" class="form-label">İsminiz:</label>
+                            <input type="text" placeholder="John Doe" class="form-control" id="validationCustom01"
+                                required>
+                            <div class="valid-feedback">
+                                İyi görünüyor!
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <label for="validationCustom02" class="form-label">Şifreniz:</label>
+                            <input type="password" class="form-control" placeholder="******" id="validationCustom02"
+                                required>
+                            <div class="valid-feedback">
+                                İyi görünüyor!
+                            </div>
+                        </div>
+                        <div class="col-10 d-flex justify-content-end">
+                            <button class="btn btn-success" type="submit">Kayıt Ol</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======= Carousel Start ======= -->
+        <div id="carouselExampleInterval" class="main-carousel carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/img/header2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="./assets/img/header3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <!-- End Carousel -->
+    </section>
+    <!-- End Header -->
+
+    <!-- ! ======= Heading Start ======= -->
+    <section id="heading" class="d-flex align-items-center pt-lg-0 pt-5">
+        <div class=" animated fadeInLeft container d-flex flex-lg-row flex-column justify-content-evenly">
+            <div class="col-lg-7 col-md-12 col-12 d-flex justify-content-center align-items-center">
+                <p class="heading-text">Ben, Gizem Gök. Selçuk Üniversitesi Bilgisayar Mühendisliği bölümünden yeni
+                    mezun oldum. Yaklaşık 2 yıldır hem staj
+                    hem de freelance yaptığım işler sayesinde bilişim sektöründeyim. Bu süreçte birçok projede çalışma
+                    fırsatım oldu.
+                    Yaklaşık 1.5 yıl bir firmada Frontend Development alanında staj yaptım. HTML, CSS, Bootstrap,
+                    JavaScript, React, Git
+                    gibi birçok teknoloji ile çalıştım.</p>
+            </div>
+            <div class=" animated fadeInRight col-lg-5 col-sm-12 image-container d-flex justify-content-center"
+                data-direction="right">
+                <img src="./assets/img/anıtkabir.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ebdef0" fill-opacity="1"
+            d="M0,192L80,176C160,160,320,128,480,138.7C640,149,800,203,960,192C1120,181,1280,107,1360,69.3L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+        </path>
+    </svg>
+
+    <!-- End Heading -->
+
+    <!-- ! ======= Mission and Vision Section Start ======= -->
+    <section class="container mt-5 corporate-section mb-5">
+        <div class="mission-container d-flex flex-lg-row flex-column justify-content-evenly align-items-center mb-5">
+            <img class="animated fadeInLeft col-lg-4 col-10 d-flex justify-content-center"
+                src="./assets/img/header3.jpg" alt="">
+            <div
+                class="animated fadeInRight col-lg-5 col-10 d-flex flex-column align-items-center justify-content-start text-end">
+                <div class="d-flex col-12 flex-column align-items-start justify-content-start">
+                    <h4 class="my-lg-0 mt-3">Misyon</h4>
+                    <div class="heading-border"></div>
+                </div>
+                <div class="d-flex flex-row">
+                    <p style="text-align: justify;">Frontend alanında her gün yeni teknolojiler öğrenip kendimi
+                        geliştiremeye çalışıyorum. </p>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="mission-container d-flex flex-lg-row-reverse flex-column justify-content-evenly align-items-center mb-5">
+            <img class="animated fadeInRight col-lg-4 col-10 d-flex justify-content-center"
+                src="./assets/img/header2.jpg" alt="">
+            <div
+                class="animated fadeInLeft col-lg-5 col-10 d-flex flex-column align-items-center justify-content-start text-end">
+                <div class="d-flex col-12 flex-column align-items-end justify-content-end">
+                    <h4 class="my-lg-0 mt-3">Vizyon</h4>
+                    <div class="heading-border"></div>
+                </div>
+                <div class="d-flex flex-row">
+                    <p style="text-align: justify;">İş hayatımın ilk zamanlarında kendimi geliştireceğim bir firmada
+                        çalışmayı çok
+                        isterim. Mesleğimin ilk zamanlarında; enerjimi, hevesimi ve mesleki bilgimi iyi bir ekiple
+                        çalışarak daha da geliştirmek
+                        istiyorum.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Mission and Vision Section -->
+
+
+    <!-- ! ======= About My Profession Start ======= -->
+    <section class="proffesion-section d-flex flex-column align-items-center py-5 mb-5">
+        <div class="overlay-title"></div>
+        <h2 class="title-text">Neler yapıyorum?</h2>
+        <div class="d-flex flex-lg-row flex-column justify-content-evenly col-10 pt-5">
+            <div class="profession-card col-lg-4 col-12 mx-2 my-5 my-lg-0">
+                <i class="fa-solid fa-code"></i>
+                <p>İstediğiniz tasarımı bütün cihazlara <br> uyumlu şekilde koda dökebilirim.</p>
+                <button class="read-more">Daha Fazla</button>
+            </div>
+            <div class="profession-card col-lg-4 col-12 mx-2 my-5 my-lg-0">
+                <i class="fa-solid fa-question"></i>
+                <p>Hayalinizdeki projeye <br> yazılım desteği sağlayabilirim.</p>
+                <button class="read-more">Daha Fazla</button>
+            </div>
+            <div class="profession-card col-lg-4 col-12 mx-2 my-5 my-lg-0">
+                <i class="fa-solid fa-crop-simple"></i>
+                <p>Tasarımınızı müşterileriniz daha rahat <br>kullansın diye UX/UI desteği sağlayabilirim.</p>
+                <button class="read-more">Daha Fazla</button>
+            </div>
+        </div>
+    </section>
+    <!-- End About My Profession -->
+
+    <!-- ! ======= Projects Start ======= -->
+    <section class="container mb-5 py-5" id="projects">
+        <h2 class="section-title">Projeler</h2>
+        <div class="owl-carousel project-container">
+            <div class="image-container">
+                <a class="overlay" href="/">
+                    <p class="project-name">Omni Suite</p>
+                </a>
+                <img src="./assets/img/project1.png" alt="">
+            </div>
+            <div class="image-container">
+                <a class="overlay" href="/">
+                    <p class="project-name">İskambil Ajans</p>
+                </a>
+                <img src="./assets/img/project2.png" alt="">
+            </div>
+            <div class="image-container">
+                <a class="overlay" href="/">
+                    <p class="project-name">İsimnette</p>
+                </a>
+                <img src="./assets/img/project3.png" alt="">
+            </div>
+            <div class="image-container">
+                <a class="overlay" href="/">
+                    <p class="project-name">Portfolio</p>
+                </a>
+                <img src="./assets/img/project4.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- End Projects -->
+
+    <!-- ! ======= Ataturk Start ======= -->
+    <section class="ataturk-parallax d-flex flex-column align-items-center py-5 mb-5">
+        <div class="overlay-title"></div>
+        <div class="d-flex flex-column justify-content-evenly col-10 pt-5">
+            <p>“Çalışmadan, yorulmadan ve üretmeden, rahat yaşamak isteyen toplumlar; evvela haysiyetlerini, sonra
+                hürriyetlerini <br> daha
+                sonra da istiklal ve istikballerini kaybetmeye mahkumdurlar.”</p>
+            <p>Mustafa Kemal Atatürk</p>
+        </div>
+    </section>
+    <!-- End Ataturk -->
+
+    <!-- ! ======= Techs I Use Start ======= -->
+    <section class="techs-section d-flex flex-column align-items-center py-5 mb-5">
+        <div class="overlay-title"></div>
+        <h2 class="title-text">Kullandığım Teknolojiler</h2>
+        <div class="d-flex flex-lg-row flex-column justify-content-evenly col-10 pt-5">
+            <div class="profession-card mx-2 my-3 my-lg-0">
+                <i class="fab fa-html5"></i>
+                <p>HTML</p>
+            </div>
+            <div class="profession-card mx-2 my-3 my-lg-0">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS</p>
+            </div>
+            <div class="profession-card mx-2 my-3 my-lg-0">
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="profession-card mx-2 my-3 my-lg-0">
+                <i class="fa-brands fa-react"></i>
+                <p>React</p>
+            </div>
+            <div class="profession-card mx-2 my-3 my-lg-0">
+                <i class="fa-brands fa-vuejs"></i>
+                <p>Vue</p>
+            </div>
+            <div class="profession-card mx-2 my-3 my-lg-0">
+                <i class="fa-brands fa-git-alt"></i>
+                <p>Git</p>
+            </div>
+            <div class="profession-card mx-2 my-3 my-lg-0">
+                <i class="fa-brands fa-linux"></i>
+                <p>Linux</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Techs I Use -->
+
+    <hr>
+
+    <!-- ! ======= Informations Start ======= -->
+    <section class="information-section d-flex flex-column align-items-center py-5 mb-5">
+        <div class="overlay-title"></div>
+        <h4 class="title-text">Şu ana kadar;</h4>
+        <div class="d-flex flex-lg-row flex-column justify-content-evenly col-10 pt-5">
+            <div class="information-card mx-2 my-3 my-lg-0">
+                <p class="title-number">150</p>
+                <p>Mutlu Müşteri</p>
+            </div>
+            <div class="information-card mx-2 my-3 my-lg-0">
+                <p class="title-number">10</p>
+                <p>Teknoloji</p>
+            </div>
+            <div class="information-card mx-2 my-3 my-lg-0">
+                <p class="title-number">18</p>
+                <p>Proje</p>
+            </div>
+            <div class=" information-card mx-2 my-5 my-lg-0">
+                <p id="datebtn" class="title-number">Saat</p>
+                <button type="button" id="clockButton"><i class="fa-solid fa-clock"></i></button>
+            </div>
+        </div>
+    </section>
+    <!-- End Informations -->
+
+    <!-- ! ======= Contact Form Start ======= -->
+    <section id="contact-form" class="contact-form container pt-5">
+
+        <div class="heading d-flex flex-column justify-content-center">
+            <h2 class="font-weight-bold text-center my-4">Bana Ulaşın</h2>
+            <p class="col-lg-8 col-sm-10 text-center w-responsive mx-auto mb-5">Aşağıdaki formu doldurarak bana
+                ulaşabilirsiniz! :) </p>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-5 col-sm-12 col-md-8">
+                <form id="contactForm" action="send.php" method="post">
+                    <div class="row form-height">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="İsim">
+                        </div>
+                        <div class="form-group mt-1">
+                            <input type="mail" class="form-control" name="mail" placeholder="E-posta Adresi">
+                        </div>
+                        <div class="form-group mt-1">
+                            <input type="text" class="form-control" name="phone" placeholder="Telefon">
+                        </div>
+                        <div class="form-group">
+                            <textarea type="text" rows="4" cols="50" name="message" class="form-control-textarea"
+                                placeholder="Mesaj"></textarea>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center justify-content-lg-end mt-3">
+                        <div class="yaz hidden" style="color:red;margin-top:10px; margin-right:50px;font-size:20px">
+                            Lütfen boş alan
+                            bırakmayınız.</div>
+                        <button class="col-lg-4 col-8 btn btn-contact submitButton">Gönder</button>
+                    </div>
+                </form>
+            </div>
+
+            <div
+                class="col-lg-5 col-md-6 form-height mt-5 mt-md-5 mt-lg-0 mt-md-0 d-flex flex-column justify-content-between align-items-sm-center align-items-lg-end">
+                <div class="form-texts">
+                    <h5 class="text-uppercase form-title-text">Adres</h5>
+                    <div class="contact-title-border"></div>
+                    <p><strong>Konya, Turkey</strong>
+                    </p>
+                </div>
+
+                <div class="form-texts">
+                    <h5 class="text-uppercase form-title-text">Telefon</h5>
+                    <div class="contact-title-border"></div>
+                    <p>+90 555 555 55 55</p>
+                </div>
+
+                <div class="form-texts">
+                    <h5 class="text-uppercase form-title-text">Mail</h5>
+                    <div class="contact-title-border"></div>
+                    <p><a href="mailto:gizemgk654@gmail.com" class="text-black">
+                            gizemgk654@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 d-flex justify-content-center mt-5 mb-5">
+            <iframe class="col-lg-10"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25148.10140281107!2d32.50177056109406!3d38.01182591298053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d0929d51342121%3A0x51cfd386eaa10a!2sBosna%20Hersek%2C%2042250%20Sel%C3%A7uklu%2FKonya!5e0!3m2!1str!2str!4v1658150010423!5m2!1str!2str"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+
+    </section>
+    <!-- End Contact Form -->
+
+
+
+
+    <!-- ! ======= Footer Start ======= -->
+    <footer class="custom-footer section text-white">
+        <div class="container p-4">
+            <section class="">
+                <div class="row">
+
+                    <div class="d-flex animated fadeInLeft justify-content-center col-lg-3 col-md-6 col-sm-12 mb-5 mb-md-0"
+                        data-direction="left">
+                        <img src="./assets/img/logowhite.png" style="width: 250px;" alt="Gizem Gök Logo">
+                    </div>
+
+                    <div class="footer-menu col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <div class="mb-3">
+                            <h5 class="text-uppercase">Menu</h5>
+                            <div class="menu-link-title"></div>
+                        </div>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="footer-menu-link">Anasayfa</a>
+                            </li>
+                            <li>
+                                <a href="#heading" class="footer-menu-link">Hakkımda</a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="footer-menu-link">Projeler</a>
+                            </li>
+                            <li>
+                                <a href="#contact-form" class="footer-menu-link">İletişim</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu col-lg-3 col-md-6 mb-5 mb-md-0">
+                        <div class="mb-3">
+                            <h5 class="text-uppercase">Projeler</h5>
+                            <div class="menu-link-title"></div>
+                        </div>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="/" class="footer-menu-link">Omni Suite</a>
+                            </li>
+                            <li>
+                                <a href="/" class="footer-menu-link">İskambil Web Sitesi</a>
+                            </li>
+                            <li>
+                                <a href="/" class="footer-menu-link">İsimnette</a>
+                            </li>
+                            <li>
+                                <a href="/" class="footer-menu-link">Portfolyo</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu col-lg-3 col-md-6 mb-5 mb-md-0">
+                        <div class="mb-3">
+                            <h5 class="text-uppercase">İletişim</h5>
+                            <div class="menu-link-title"></div>
+                        </div>
+                        <p><strong>Konya, Turkey </strong>
+                        </p>
+                        <p><i class="fa-solid fa-phone"></i> +90 555 555 55 55</p>
+                        <p><a href="mailto:gizemgk654@gmail.com" class="text-white"><i class="fa-solid fa-envelope"></i>
+                                gizemgk654@gmail.com</a></p>
+                        <div class="d-flex flex-row">
+                            <a class="btn btn-outline-light social-links m-1" href="#!" role="button"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light social-links m-1" href="https://twitter.com/hgizemg"
+                                role="button"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light social-links m-1" href="https://instagram.com/hgizemg"
+                                role="button"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="/">Gizem Gök</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Template Main JS File -->
+    <script src="assets/vendor/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+    </script>
+
+</body>
+
+</html>
